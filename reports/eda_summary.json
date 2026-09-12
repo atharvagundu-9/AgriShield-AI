@@ -1,0 +1,116 @@
+{
+  "shape": [
+    10000,
+    34
+  ],
+  "year_range": [
+    2001,
+    2025
+  ],
+  "districts": 35,
+  "crops": [
+    "Cotton",
+    "Maize",
+    "Rice",
+    "Soybean",
+    "Sugarcane",
+    "Wheat"
+  ],
+  "missing_cells": 0,
+  "duplicate_rows": 0,
+  "duplicate_record_ids": 0,
+  "numeric_columns": [
+    "record_id",
+    "year",
+    "annual_rainfall_mm",
+    "rainfall_anomaly_pct",
+    "avg_temperature_c",
+    "max_temperature_c",
+    "min_temperature_c",
+    "temperature_anomaly_c",
+    "humidity_pct",
+    "soil_moisture_pct",
+    "soil_ph",
+    "nitrogen_kg_ha",
+    "phosphorus_kg_ha",
+    "potassium_kg_ha",
+    "irrigation_pct",
+    "hot_days",
+    "consecutive_dry_days",
+    "heavy_rain_days",
+    "cultivated_area_ha",
+    "drought_risk_score",
+    "heat_risk_score",
+    "flood_risk_score",
+    "overall_climate_risk_score",
+    "yield_tonnes_per_ha",
+    "production_tonnes"
+  ],
+  "categorical_columns": [
+    "state",
+    "district",
+    "agro_climatic_region",
+    "crop",
+    "season",
+    "drought_risk",
+    "heat_risk",
+    "flood_risk",
+    "overall_climate_risk"
+  ],
+  "target_summary": {
+    "count": 10000.0,
+    "mean": 5.6095785000000005,
+    "std": 12.88641329313141,
+    "min": 0.08,
+    "25%": 0.245,
+    "50%": 0.692,
+    "75%": 1.669,
+    "max": 78.93
+  },
+  "production_identity": {
+    "median_absolute_rounding_error_tonnes": 0.6830999999995129,
+    "max_absolute_rounding_error_tonnes": 84.25509999971837,
+    "conclusion": "production_tonnes is a post-harvest arithmetic derivative and target leakage"
+  },
+  "top_absolute_target_correlations": {
+    "yield_tonnes_per_ha": 1.0,
+    "production_tonnes": 0.6230223724007521,
+    "irrigation_pct": 0.6062001086958253,
+    "drought_risk_score": 0.37618527730451046,
+    "soil_moisture_pct": -0.30651918509304943,
+    "flood_risk_score": -0.15063216303444876,
+    "consecutive_dry_days": 0.13157344582316077,
+    "overall_climate_risk_score": 0.11095073056212788,
+    "avg_temperature_c": 0.09849534401930711,
+    "temperature_anomaly_c": 0.08890059055486516,
+    "annual_rainfall_mm": -0.06360530210332463,
+    "heavy_rain_days": -0.058943007305235
+  },
+  "risk_category_counts": {
+    "drought_risk": {
+      "Low": 9378,
+      "Medium": 620,
+      "High": 2
+    },
+    "heat_risk": {
+      "Low": 7093,
+      "Medium": 2651,
+      "High": 256
+    },
+    "flood_risk": {
+      "Low": 7742,
+      "High": 1485,
+      "Medium": 773
+    },
+    "overall_climate_risk": {
+      "Low": 9153,
+      "Medium": 847
+    }
+  },
+  "quality_flags": [
+    "Yield has a floor at 0.08 t/ha and a strongly crop-dependent distribution.",
+    "Cultivated area and production are highly right-skewed; robust preprocessing is appropriate.",
+    "Overall risk has no High records under the supplied labels, creating class imbalance.",
+    "Cross-crop correlations can be confounded by crop scale; group-wise views are essential."
+  ]
+}

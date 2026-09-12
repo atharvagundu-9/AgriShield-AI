@@ -1,0 +1,11 @@
+.block-container { max-width: 1500px; padding-top: 1.6rem; padding-bottom: 3rem; }
+h1, h2, h3 { letter-spacing: -0.02em; }
+.hero {
+  padding: 1.8rem 2rem; border-radius: 22px; color: white;
+  background: radial-gradient(circle at 85% 15%, rgba(216,169,59,.35), transparent 24%),
+              linear-gradient(120deg, #123524, #27734a);
+  box-shadow: 0 16px 36px rgba(21,67,43,.14); margin-bottom: 1rem;
+}
+.hero h1 { color: white; margin: 0; font-size: 2.5rem; }
+.hero p { margin: .4rem 0 0; color: #e9f2e9; font-size: 1.05rem; }
+.eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: #d8e7d8; }

@@ -1,0 +1,34 @@
+{
+  "selected_model": "XGBoost",
+  "target": "yield_tonnes_per_ha",
+  "selection_note": "Selected by 2021\u20132022 validation RMSE; 2023\u20132025 remained an untouched final test.",
+  "time_split": {
+    "train": "2001\u20132020",
+    "validation": "2021\u20132022",
+    "test": "2023\u20132025",
+    "train_rows": 8010,
+    "validation_rows": 795,
+    "test_rows": 1195
+  },
+  "random_split_diagnostic": {
+    "MAE": 0.5598877915275662,
+    "RMSE": 1.6031887218851053,
+    "R2": 0.985043424338276,
+    "MAPE_pct": 15.442367587478472
+  },
+  "test_metrics": {
+    "Validation MAE": 0.5757131211820826,
+    "Validation RMSE": 1.721376485739027,
+    "Validation R2": 0.9822094748664942,
+    "Validation MAPE_pct": 17.43941759218306,
+    "Test MAE": 0.5513854258001599,
+    "Test RMSE": 1.5640962735614623,
+    "Test R2": 0.9873733525631329,
+    "Test MAPE_pct": 15.972768162439262
+  },
+  "leakage_exclusions": [
+    "production_tonnes (post-harvest arithmetic derivative of yield \u00d7 area)",
+    "all supplied climate-risk scores and labels (derived analytics kept separate)",
+    "record_id and constant state"
+  ]
+}
